@@ -1,0 +1,19 @@
+{
+    "name": "browser",
+    "short_name": "browser",
+    "icons": [
+        {
+            "src": "/img/f/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/f/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#060d08",
+    "background_color": "#060d08",
+    "display": "standalone"
+}
