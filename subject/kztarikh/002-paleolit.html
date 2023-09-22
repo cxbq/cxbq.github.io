@@ -23,7 +23,18 @@
 position: fixed;
 
 }
+#menu a {
+    color: #eee;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 18px;
+    opacity: 0.7;
 
+}
+#menu a:hover {
+    opacity: 1;
+}
 /* Style the links inside the navigation bar */
 .topnav a, button {
   font-family: monospace;
@@ -120,7 +131,8 @@ position: fixed;
         margin-top: 55px;
     }
     #menu {
-        left: -200px; /* Hide the menu off-screen */
+        background-color: rgba(0,0,0,.5);
+        width: 100%;
     }
 
     .topnav {
@@ -162,10 +174,30 @@ position: fixed;
         font-weight: bolder;
     }
 }
+/* Styles for the preloader container */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Styles for the loading GIF */
+.preloader img {
+    max-width: 100px; /* Adjust the size as needed */
+}
 </style>
 </head>
 <body>
-
+<div class="preloader">
+        <img src="../../cdn/load/loading.gif" alt="Loading..." />
+    </div>
 <table class="mainest">
 <tr><td>
     <h2>Палеолит дәуірі (ежелгі тас)</h2>
@@ -239,22 +271,23 @@ position: fixed;
     </table>
 </td></tr>
 </table>
+
+<div id="menu" class="hidden">
+        <ul>
+            <li><a href="https://cxbq.github.io">Басты бет</a></li>
+            <li><a href="../../sb/list.html">Үй-тап. кестелері</a></li>
+            <li><a href="../../subject/all.html">Пәндер</a></li>
+        </ul>
+    </div>
 <div class="topnav">
   <button id="menuButton" >
         <img src="../../img/menu.png">
     </button>
-<a href="https://cxbq.github.io">
+  <a href="https://cxbq.github.io">
         <img src="../../img/nurbox.png" style="width: 20px;">
   </a>
   <a href="https://cxbq.github.io">Басты бет</a>
 </div>
-<div id="menu" class="hidden">
-        <ul>
-            <li><a href="#">Menu Item 1</a></li>
-            <li><a href="#">Menu Item 2</a></li>
-            <li><a href="#">Menu Item 3</a></li>
-        </ul>
-    </div>
 
 <script type="text/javascript">
 // Get references to the button and the menu
@@ -288,6 +321,12 @@ function openPage() {
             // Open the webpage in a new tab or window
             window.open(url);
         }
+// Wait for the page to fully load
+window.addEventListener("load", function () {
+    // Hide the preloader when the page is loaded
+    const preloader = document.querySelector(".preloader");
+    preloader.style.display = "none";
+});
 
 </script>
 </body>
