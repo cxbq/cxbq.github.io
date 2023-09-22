@@ -158,20 +158,30 @@ position: fixed;
         margin-right: 15px;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 370px) {
     .mainest h2, .mainest h3, .mainest p, .mainest a {
         margin-inline: 15px;
         margin-right: 15px;
-        font-size: 9px;
         font-weight: bold;
     }
+    .mainest p, a {
+        font-size: 11px;
+    }
+    .mainest h2 {
+        font-size: 20px;
+    }
+    .mainest h3 {
+        font-size: 17px;
+    }
+
 }
 @media (max-width: 270px) {
-    .mainest h2, .mainest h3, .mainest p, .mainest a {
-        margin-inline: 15px;
-        margin-right: 15px;
-        font-size: 7.5px;
+    h2, h3, p, a {
+        font-size: 7px;
         font-weight: bolder;
+    }
+    .topnav a {
+        display: none;
     }
 }
 /* Styles for the preloader container */
@@ -327,7 +337,16 @@ window.addEventListener("load", function () {
     const preloader = document.querySelector(".preloader");
     preloader.style.display = "none";
 });
+function checkViewportWidth() {
+            if (window.innerWidth < 185) {
+                window.location.href = "https://your-special-url.com";
+            }
+        }
 
+        // Add an event listener to check the viewport width when the page is fully loaded
+        window.addEventListener('DOMContentLoaded', function () {
+            checkViewportWidth();
+        });
 </script>
 </body>
 </html>
