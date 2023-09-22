@@ -184,6 +184,19 @@ position: fixed;
         display: none;
     }
 }
+@media (max-width: 185px) {
+            .topnav {
+                display: none; /* Hide all content */
+            }
+            .mainest {
+                display: none; /* Hide all content */
+            }
+            #unavailable-message {
+                display: block;
+                text-align: center;
+                margin-top: 50vh; /* Center vertically on the viewport */
+                transform: translateY(-50%);
+            }
 /* Styles for the preloader container */
 .preloader {
     position: fixed;
@@ -298,7 +311,9 @@ position: fixed;
   </a>
   <a href="https://cxbq.github.io">Басты бет</a>
 </div>
-
+<div id="unavailable-message">
+        <p>Not available on your device.<br>Құрылғыда қол жетімді емес.<br>Недоступно на вашем устройстве</p>
+    </div>
 <script type="text/javascript">
 // Get references to the button and the menu
 const menuButton = document.getElementById("menuButton");
