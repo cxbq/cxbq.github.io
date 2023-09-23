@@ -171,13 +171,13 @@ position: fixed;
         font-weight: bold;
     }
     .mainest p, a {
-        font-size: 14px;
+        font-size: 10px;
     }
     .mainest h2 {
-        font-size: 20px;
+        font-size: 16px;
     }
     .mainest h3 {
-        font-size: 17px;
+        font-size: 13px;
     }
         #unavailable-message {
                 display: none;
@@ -209,13 +209,15 @@ position: fixed;
                 margin-top: 50vh; /* Center vertically on the viewport */
                 transform: translateY(-50%);
             }
-/* Styles for the preloader container */
 .preloader {
-    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -225,7 +227,7 @@ position: fixed;
 
 /* Styles for the loading GIF */
 .preloader img {
-    width: 40px; /* Adjust the size as needed */
+    max-width: 40px; /* Adjust the size as needed */
 }
 </style>
 </head>
@@ -303,9 +305,6 @@ position: fixed;
     </table>
 </td></tr>
 </table>
-<div class="preloader">
-        <img src="../../cdn/load/loading.gif" alt="Loading..." />
-    </div>
 <div id="menu" class="hidden">
         <ul>
             <li><a href="https://cxbq.github.io">Басты бет</a></li>
@@ -324,6 +323,9 @@ position: fixed;
 </div>
 <div id="unavailable-message">
         <p>Not available on your device.<br>Құрылғыда қол жетімді емес.<br>Недоступно на вашем устройстве</p>
+    </div>
+<div class="preloader">
+        <img src="../cdn/load/loading.gif" alt="Loading..." />
     </div>
 <script type="text/javascript">
 // Get references to the button and the menu
@@ -357,12 +359,6 @@ function openPage() {
             // Open the webpage in a new tab or window
             window.open(url);
         }
-// Wait for the page to fully load
-window.addEventListener("load", function () {
-    // Hide the preloader when the page is loaded
-    const preloader = document.querySelector(".preloader");
-    preloader.style.display = "none";
-});
 function checkViewportWidth() {
             if (window.innerWidth < 185) {
                 window.location.href = "https://your-special-url.com";
@@ -373,6 +369,16 @@ function checkViewportWidth() {
         window.addEventListener('DOMContentLoaded', function () {
             checkViewportWidth();
         });
+
+// Add a click event listener to the button
+menuButton.addEventListener("click", toggleMenu);
+// Wait for the page to fully load
+window.addEventListener("load", function () {
+    // Hide the preloader when the page is loaded
+    const preloader = document.querySelector(".preloader");
+    preloader.style.display = "none";
+});
+
 </script>
 </body>
 </html>

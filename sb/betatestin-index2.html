@@ -169,11 +169,14 @@
 }
 /* Styles for the preloader container */
 .preloader {
-    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -183,27 +186,25 @@
 
 /* Styles for the loading GIF */
 .preloader img {
-    max-width: 100px; /* Adjust the size as needed */
+    max-width: 40px; /* Adjust the size as needed */
 }
 </style>
 </head>
 <body>
-<div class="preloader">
-        <img src="cdn/load/loading.gif" alt="Loading..." />
-    </div>
+
 <div id="menu" class="hidden">
         <ul>
             <li><a href="https://cxbq.github.io">Басты бет</a></li>
-            <li><a href="sb/list.html">Үй-тап. кестелері</a></li>
-            <li><a href="subject/all.html">Пәндер</a></li>
+            <li><a href="list.html">Үй-тап. кестелері</a></li>
+            <li><a href="../subject/all.html">Пәндер</a></li>
         </ul>
     </div>
 <div class="topnav">
   <button id="menuButton" >
-        <img src="img/menu.png">
+        <img src="../img/menu.png">
     </button>
   <a href="https://cxbq.github.io">
-  		<img src="img/nurbox.png" style="width: 20px;">
+  		<img src="../img/nurbox.png" style="width: 20px;">
   </a>
   <a href="https://cxbq.github.io">Басты бет</a>
 </div>
@@ -212,29 +213,32 @@
     <h1>Басты бет</h1>
     <h2>Ең көп кіретін сілтемелер</h2>
     <table class="mlink-cont"><tr>
-        <td><a class="mlink-a" href="subject/kztarikh.html"><img src="cdn/imastore/icons8-activity-history-96.png" class="mlink-img"></a></td>
-        <td><a class="mlink-a" href="subject/dzh-tarikh.html"><img src="cdn/imastore/icons8-greek-helmet-96.png" class="mlink-img"></a></td>
-        <td><a class="mlink-a" href="subject/math.html"><img src="cdn/imastore/icons8-math-96.png" class="mlink-img"></a></td>
-        <td><a class="mlink-a" href="subject/tilder.html"><img src="cdn/imastore/icons8-language-96.png" class="mlink-img"></a></td>
-        <td><a class="mlink-a" href="subject/kezdeisok.html"><img src="cdn/imastore/icons8-random-96.png" class="mlink-img"></a></td>
-        <td><a class="mlink-a" href="sb/list.html"><img src="cdn/imastore/icons8-table-96.png" class="mlink-img"></a></td>
-        <td><a class="mlink-a" href="playlists.html"><img src="cdn/imastore/icons8-musical-notes-96.png" class="mlittlelink-img"></a></td>
+        <td><a class="mlink-a" href="../subject/kztarikh.html"><img src="../cdn/imastore/icons8-activity-history-96.png" class="mlink-img"></a></td>
+        <td><a class="mlink-a" href="../subject/dzh-tarikh.html"><img src="../cdn/imastore/icons8-greek-helmet-96.png" class="mlink-img"></a></td>
+        <td><a class="mlink-a" href="../subject/math.html"><img src="../cdn/imastore/icons8-math-96.png" class="mlink-img"></a></td>
+        <td><a class="mlink-a" href="../subject/tilder.html"><img src="../cdn/imastore/icons8-language-96.png" class="mlink-img"></a></td>
+        <td><a class="mlink-a" href="../subject/kezdeisok.html"><img src="../cdn/imastore/icons8-random-96.png" class="mlink-img"></a></td>
+        <td><a class="mlink-a" href="list.html"><img src="../cdn/imastore/icons8-table-96.png" class="mlink-img"></a></td>
+        <td><a class="mlink-a" href="../playlists.html"><img src="../cdn/imastore/icons8-musical-notes-96.png" class="mlittlelink-img"></a></td>
     </tr></table>
     <h2>Қазақстан тарихы</h2>
     <table class="material">
         <tr>
-            <th><a href="subject/kztarikh/002-paleolit.html"><img src="cdn/thumb/paleolit.jpg" class="thumb-a"></a></th>
-            <th><a href="subject/kztarikh/001-ortaasia.html"><img src="cdn/thumb/ortaasia.jpg" class="thumb"></a></th>
-            <th><a href="subject/kztarikh/003-neolit.html"><img src="cdn/thumb/neolit.jpg" class="thumb"></a></th>
+            <th><a href="../subject/kztarikh/002-paleolit.html"><img src="../cdn/thumb/paleolit.jpg" class="thumb-a"></a></th>
+            <th><a href="../subject/kztarikh/001-ortaasia.html"><img src="../cdn/thumb/ortaasia.jpg" class="thumb"></a></th>
+            <th><a href="../subject/kztarikh/003-neolit.html"><img src="../cdn/thumb/neolit.jpg" class="thumb"></a></th>
         </tr>
         <tr>
-            <th><a href="subject/kztarikh/002-paleolit.html"><p class="materialtitle-a">Палеолит дәуірі (ежелгі тас) реферат</p></a></th>
-            <th><a href="subject/kztarikh/001-ortaasia.html"><p class="materialtitle">Тәуелсіз Қазақстан және Орталық Азия мемлекеттері</p></a></th>
+            <th><a href="../subject/kztarikh/002-paleolit.html"><p class="materialtitle-a">Палеолит дәуірі (ежелгі тас) реферат</p></a></th>
+            <th><a href="../subject/kztarikh/001-ortaasia.html"><p class="materialtitle">Тәуелсіз Қазақстан және Орталық Азия мемлекеттері</p></a></th>
             <th><p class="materialtitle">Неолит дәуірі реферат</p></th>
         </tr>
     </table>
 </td></tr>
 </table>
+<div class="preloader">
+        <img src="../cdn/load/loading.gif" alt="Loading..." />
+    </div>
 <script type="text/javascript">
 // Get references to the button and the menu
 const menuButton = document.getElementById("menuButton");
