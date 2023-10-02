@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ағымдағы айға қайта бағыттау</title>
+</head>
+<body>
+    <button id="redirectButton">Ағымдағы айға қайта бағыттау</button>
+
+    <script>
+        document.getElementById("redirectButton").addEventListener("click", function() {
+            // Get the current date
+            const currentDate = new Date();
+
+            // Extract the day and year components
+            const day = currentDate.getDate();
+            const year = currentDate.getFullYear() % 100; // Get the last two digits of the year
+
+            // Format the month to have a leading zero if less than 10
+            const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+
+            // Generate the page URL
+            const pageURL = `list-${month}${year}.html`;
+
+            // Redirect to the generated page
+            window.location.href = pageURL;
+        });
+        // Get the current date
+        const currentDate = new Date();
+
+        // Extract the day and year components
+        const day = currentDate.getDate();
+        const year = currentDate.getFullYear() % 100; // Get the last two digits of the year
+
+        // Format the month to have a leading zero if less than 10
+        const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+
+        // Generate the page URL
+        const pageURL = `list-${month}${year}.html`;
+
+        // Redirect to the generated page
+        window.location.href = pageURL;
+    </script>
+</body>
+</html>
