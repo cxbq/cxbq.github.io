@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Күнтізбе - Қыркүйек 2023</title>
+	<title>Күнтізбе - Қазан 2023</title>
 	<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
@@ -12,8 +12,8 @@
 	<meta name="msapplication-TileColor" content="#603cba">
 	<meta name="theme-color" content="#cdb0e7">
 
-	<meta name="description" content="Күнтізбе - Қыркүйек 2023">
-	<meta property=’og:title’ content='Күнтізбе - Қыркүйек 2023'/>
+	<meta name="description" content="Күнтізбе - Қазан 2023">
+	<meta property=’og:title’ content='Күнтізбе - Қазан 2023'/>
 	<meta property=’og:image’ content='https://cxbq.github.io/sb/cover.png'/>
 	<meta property=’og:description’ content='Барлық үй тапсырмалары бар кестелер'/>
 	<meta property=’og:url’ content='https://cxbq.github.io'/>
@@ -99,24 +99,6 @@
 			margin: 1.5px 10px 1px 10px;
 			text-decoration-color: violet;
 		}
-		button {
-			align-self: flex-end;
-			margin: 2.5px 4px 2.5px 15px;
-			background-color: #404040;
-			color: #f0f0f0;
-			width: 270px;
-			font-family: monospace;
-			outline: 0;
-			border: 1px solid gray;
-			height: 26px;
-			padding-inline: 10px;
-			padding-right: 10px;
-		}
-		button:hover {
-			background-color: #121212;
-			color: #fff;
-			cursor: pointer;
-		}
 	</style>
 </head>
 <body>
@@ -126,7 +108,7 @@
 <table class="a">
   	<thead>
     <tr>
-      <th colspan="7">Қыркүйек</th>
+      <th colspan="7">Қазан</th>
     </tr>
   	</thead>
   	<tbody>
@@ -144,67 +126,59 @@
       <td></td>
       <td></td> 
       <td></td>
-	  <td>1</td> 
-      <td>2</td>
+	  <td></td> 
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><a href="021023.html">2</a></td> 
       <td>3</td>
-    </tr>
-    <tr>
       <td>4</td> 
-      <td><a href="050923.html">5</a></td>
-      <td><a href="060923.html">6</a></td> 
-      <td><a href="070923.html">7</a></td>
-	  <td><a href="080923.html">8</a></td> 
-      <td>9</td>
+      <td>5</td>
+	  <td>6</td> 
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>9</td> 
       <td>10</td>
+      <td>11</td> 
+      <td>12</td>
+	  <td>13</td> 
+      <td>14</td>
+      <td>15</td>
     </tr>
     <tr>
-      <td><a href="110923.html">11</a></td> 
-      <td><a href="120923.html">12</a></td>
-      <td><a href="130923.html">13</a></td> 
-      <td><a href="140923.html">14</a></td>
-	  <td><a href="150923.html">15</a></td> 
-      <td>16</td>
+      <td>16</td> 
       <td>17</td>
-    </tr>
-    <tr>
-      <td><a href="180923.html">18</a></td> 
-      <td><a href="190923.html">19</a></td>
-      <td><a href="200923.html">20</a></td> 
-      <td><a href="210923.html">21</a></td>
-	  <td><a href="220923.html">22</a></td> 
-      <td>23</td>
-      <td>24</td>
+      <td>18</td> 
+      <td>19</td>
+	  <td>20</td> 
+      <td>21</td>
+      <td>22</td>
     </tr>
 	<tr>
-      <td><a href="250923.html">25</a></td> 
+      <td>23</td> 
+      <td>24</td>
+      <td>25</td> 
       <td>26</td>
-      <td><a href="270923.html">27</a></td> 
-      <td><a href="280923.html">28</a></td>
-	  <td><a href="290923.html">29</a></td> 
-      <td>30</td>
-      <td></td>
+	  <td>27</td> 
+      <td>28</td>
+      <td>29</td>
     </tr>
+	<tr>
+      <td>30</td> 
+      <td>31</td>
+      <td></td> 
+      <td></td>
+	  <td></td> 
+      <td></td>
+      <td></td>
+    </tr>  
   	</tbody>
 </table>
-<button id="redirectButton">Ағымдағы айға қайта бағыттау</button>
 <div class="ya-share2" data-curtain data-shape="round" data-services="telegram,whatsapp"></div>
 </div>
 <script src="https://yastatic.net/share2/share.js"></script>
-<script type="text/javascript">
-        document.getElementById("redirectButton").addEventListener("click", function() {
-            // Get the current date
-            const currentDate = new Date();
-
-            // Extract the month and year components
-            const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-            const year = currentDate.getFullYear() % 100; // Get the last two digits of the year
-
-            // Generate the page URL
-            const pageURL = `list-${month}${year}.html`;
-
-            // Redirect to the generated page
-            window.location.href = pageURL;
-        });
-</script>
 </body>
 </html>

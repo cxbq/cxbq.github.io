@@ -59,7 +59,7 @@
 			font-family: monospace;
 		}
 		h4 {
-			margin: 10px 10px 2.5px 10px;
+			margin: 5px 10px 2.5px 10px;
 		}
 		p {
 			margin: 2px 2px 2.5px 10px;
@@ -93,10 +93,29 @@
 			margin: 1.5px 10px 1px 10px;
 			text-decoration-color: violet;
 		}
+		button {
+			align-self: flex-end;
+			margin: 15px 5px 2.5px 15px;
+			background-color: #404040;
+			color: #f0f0f0;
+			width: 270px;
+			font-family: monospace;
+			outline: 0;
+			border: 1px solid gray;
+			height: 26px;
+			padding-inline: 10px;
+			padding-right: 10px;
+		}
+		button:hover {
+			background-color: #121212;
+			color: #fff;
+			cursor: pointer;
+		}
 	</style>
 </head>
 <body>
 <div class="box">
+	<button id="redirectButton">Ағымдағы айға қайта бағыттау</button>
 	<h4>Список</h4>
 	<a href="290923.html">29 қыркүйек 2023 (290923)</a><br>
 	<a href="280923.html">28 қыркүйек 2023 (280923)</a><br>
@@ -120,5 +139,21 @@
 <div class="ya-share2" data-curtain data-shape="round" data-services="telegram,whatsapp"></div>
 </div>
 <script src="https://yastatic.net/share2/share.js"></script>
+<script type="text/javascript">
+        document.getElementById("redirectButton").addEventListener("click", function() {
+            // Get the current date
+            const currentDate = new Date();
+
+            // Extract the month and year components
+            const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+            const year = currentDate.getFullYear() % 100; // Get the last two digits of the year
+
+            // Generate the page URL
+            const pageURL = `list-${month}${year}.html`;
+
+            // Redirect to the generated page
+            window.location.href = pageURL;
+        });
+</script>
 </body>
 </html>
