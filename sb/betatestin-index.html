@@ -1,498 +1,162 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Webroof</title>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="icon/site.webmanifest">
+  <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#cdb0e7">
+
+  <meta name="description" content="10`А` - Барлық үй тапсырма кестелері, барлық кестелер">
+  <meta property=’og:title’ content='10`a` - Барлық үй тапсырмалары'/>
+  <meta property=’og:image’ content='https://cxbq.github.io/sb/cover.png'/>
+  <meta property=’og:description’ content='10`А` - Барлық үй тапсырма кестелері, барлық кестелер'/>
+  <meta property=’og:url’ content='https://cxbq.github.io'/>
+  <meta property='og:image:width' content='1200' />
+  <meta property='og:image:height' content='627' />
+  <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+  <meta property="og:type" content='website'/>
+
+  <title>10`А` - Барлық кестелер</title>
 <style type="text/css">
-    body {
-        background-color: #000;
-        margin: 0;
-    }
-    h1, h2, h3, h4, h5, h6, p {
-        color: #eee;
-        font-family: monospace;
-    }
-    /* Add a black background color to the top navigation */
-.topnav {
-  top: 0; left: 0;
-  background-color: #101010;
-  overflow: hidden;
-  border-bottom: 1.5px solid #000;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a, button {
-  font-family: monospace;
-  font-weight: bold;
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 10px 12px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-/* Hide the menu by default */
-.hidden {
-    display: none;
-}
-
-/* Style the menu */
-#menu {
-    top: 48px;
-    position: fixed;
-    left: 0; /* Adjust the initial position to hide the menu */
-    width: 200px; /* Adjust the menu width as needed */
-    height:calc(100% - 48px);
-    background-color: #101010;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-    overflow-y: auto;
-}
-#menu a {
-    color: #eee;
-    text-decoration: none;
-    font-family: monospace;
-    font-weight: bolder;
-    font-size: 18px;
-    opacity: 0.7;
-
-}
-#menu a:hover {
-    opacity: 1;
-}
-#menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-#menu li {
-    padding: 10px;
-    text-align: center;
-}
-
-/* Style the button */
-#menuButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Style the special image */
-#menuButton img {
-    float: center;
-  color: #f2f2f2;
-  text-align: center;
-  margin-inline: 4px;
-  text-decoration: none;
-  font-size: 17px;
-    width: 19px; /* Adjust the size as needed */
-    height: 19px; /* Adjust the size as needed */
-}
-.mainest {
-    margin-top: 55px;
-    width: 750px;
-    position: absolute;
-    left: 50%;
-    -ms-transform: translateX(-50%);
-    -webkit-transform: translate(-50%,0);
-    transform: translate(-50%,0);
-}
-.mainest h1 {
-    margin: 1px 0 10px 0;
-    font-weight: bolder;
-    font-size: 34px;
-}
-.mainest h2 {
-    margin: 1px 0 4px 0;
-    font-size: 22px;
-}
-.mlink-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 13px;
-    background-color: #121212;
-    padding: 25px;
-    margin-right: 5px;
-}
-.mlittlelink-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 13px;
-    background-color: #662549;
-    padding: 25px 12.5px 25px 12.5px;
-    margin-right: 5px;
-}
-.mlink-img:hover {
-    background-color: #242424;
-    transition: 0.25s;
-}
-.mlittlelink-img:hover {
-    background-color: #AE445A;
-    transition: 0.25s;
-}
-.mlink-cont {
-    margin-bottom: 20px;
-}
-.thumb {
-    opacity: 0.75;
-    width: 240px;
-    height: 131px;
-    border-radius: 14px;
-    margin-inline: 5px;
-}
-.thumb-a {
-    opacity: 0.75;
-    width: 240px;
-    height: 135,8490566037736px;
-    border-radius: 14px;
-}
-.thumb:hover, .thumb-a:hover {
-    opacity: 1;
-    transition: 0.25s;
-}
-.materialtitle {
-    width: 240px;
-    margin-inline: 5px;
-}
-.materialtitle-a {
-    width: 240px;
-}
-.materialtitle, .materialtitle-a {
-    margin-top: 0;
-    margin-bottom: 0;
-    float: left;
-    opacity: 0.75;
-}
-.materialtitle:hover, .materialtitle-a:hover {
-    transition: 0.25s;
-    opacity: 1;
-}
-.material th {
-    margin: 0;
-    padding: 0;
-}
-.userlink {
-    font-family: arial;
-    font-size: 15px;
-    color: #eee;
-    text-decoration-color: rebeccapurple;
-}
-    #unavailable-message {
-                display: none;
-            }
-@media (max-width: 750px) {
-        #unavailable-message {
-                display: none;
-            }
-    .mainest {
-        width: 500px;
-    }
-.mlink-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 13px;
-    background-color: #121212;
-    padding: 25px;
-    margin-right: 2px;
-}
-.mlittlelink-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 13px;
-    background-color: #662549;
-    padding: 25px 12.5px 25px 12.5px;
-    margin-right: 2px;
-}
-    }
-    #menu {
-        background-color: rgba(0,0,0,.7);
-        width: 100%;
-    }
-
-    .topnav {
-        position: fixed;
-        width: 100%;
-    }
-
-    #menuButton {
-        float: right;
-        margin-right: 10px;
-    }
-
-    #menuButton img {
-        width: 24px;
-        height: 24px;
-    }
-
-    #menu.open {
-        left: 0; /* Show the menu */
-    }
-    .material, .mlink-cont {
-        width: 200px;
-    }
-    .mainest h2, .mainest h3, .mainest p, .mainest a {
-        margin-inline: 10px;
-        margin-right: 5px;
-    }
-    .mainest h1 {
-        margin-inline: 10px;
-        margin-right: 5px;
-    }
-}
-@media (max-width: 500px) {
-        #unavailable-message {
-                display: none;
-            }
-    .mainest td {
-        position: absolute;
-          left: 50%;
-          -ms-transform: translateX(-50%) translateY(-50%);
-          -webkit-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
-        width: 450px;
-    }
-}
-@media (max-width: 470px) {
-    .mainest {
-        width: 400px;
-        margin-inline: 0;
-        margin-right: 0;
-    }
-        .mainest td {
-        width: 390px;
-    }
-    .mainest h2, .mainest h3, .mainest p, .mainest a {
-        margin-inline: 10px;
-        margin-right: 5px;
-        font-weight: bold;
-        width: 100%;
-    }
-    .mainest p, a {
-        font-size: 8px;
-    }
-    .mainest h1 {
-        font-size: 13.5px;
-    }
-    .mainest h2 {
-        font-size: 12px;
-    }
-    .mainest h3 {
-        font-size: 10px;
-    }
-        #unavailable-message {
-                display: none;
-            }
-
-}
-@media (max-width: 370px) {
-    .mainest {
-        width: 300px;
-        margin-inline: 0;
-        margin-right: 0;
-    }
-        .mainest td {
-        width: 290px;
-    }
-    .thumb-a, .thumb {
-        width: 150px;
-    }
-    .mainest h2, .mainest h3, .mainest p, .mainest a {
-        margin-inline: 10px;
-        margin-right: 5px;
-        font-weight: bold;
-        width: 100%;
-    }
-    .mainest p, a {
-        font-size: 8px;
-    }
-    .mainest h1 {
-        font-size: 13.5px;
-    }
-    .mainest h2 {
-        font-size: 12px;
-    }
-    .mainest h3 {
-        font-size: 10px;
-    }
-        #unavailable-message {
-                display: none;
-            }
-
-}
-@media (max-width: 270px) {
-    .mainest {
-        width: 170px;
-        margin-inline: 0;
-        margin-right: 0;
-    }
-        .mainest td {
-        width: 150px;
-    }
-    .thumb-a, .thumb {
-        width: 80px;
-    }
-   h2, h3, p, a {
-        font-size: 7px;
-        font-weight: bolder;
-    }
-    .topnav a {
-        display: none;
-    }
-    #unavailable-message {
-                display: none;
-            }
-        #unavailable-message {
-                display: none;
-            }
-    a#list {
-        display: block;
-    }
-.mlink-img {
-    width: 20px;
-    height: 20px;
-    border-radius: 13px;
-    background-color: #121212;
-    padding: 5px;
-    margin-right: 2px;
-}
-.mlittlelink-img {
-    width: 20px;
-    height: 20px;
-    border-radius: 13px;
-    background-color: #662549;
-    padding: 12.5px 6.25px 12.5px 6.25px;
-    margin-right: 2px;
-}
-
-}
-@media (max-width: 185px) {
-            .topnav {
-                display: none; /* Hide all content */
-            }
-            .mainest {
-                display: none; /* Hide all content */
-            }
-            #unavailable-message {
-                display: block;
-                text-align: center;
-                margin-top: 50vh; /* Center vertically on the viewport */
-                transform: translateY(-50%);
-            }
-.preloader {
-    top: 0;
-    left: 0;
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-/* Styles for the loading GIF */
-.preloader img {
-    max-width: 40px; /* Adjust the size as needed */
-}
+body,h1,h2,h3,h4,h5,h6{font-weight:300}.icon>svg,img{vertical-align:middle}.post-link,figure>img{display:block}.post-title,.site-title,blockquote{letter-spacing:-1px}.highlight .cs,.highlight .ge,blockquote{font-style:italic}blockquote,body,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{margin:0;padding:0}body{font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#fff;background-color:#121212;-webkit-text-size-adjust:100%}.highlight,blockquote,dl,figure,h1,h2,h3,h4,h5,h6,ol,p,pre,ul{margin-bottom:15px}.site-title,blockquote>:last-child,li>ol,li>ul{margin-bottom:0}img{max-width:100%}figcaption{font-size:14px}ol,ul{margin-left:30px}a{color:#2a7ae2;text-decoration:none}a:visited{color:#1756a9}a:hover{color:#fff;text-decoration:underline}blockquote{color:#828282;border-left:4px solid #e8e8e8;padding-left:15px;font-size:18px}code,pre{font-size:15px;border:1px solid #e8e8e8;border-radius:3px;background-color:#eef}code{padding:1px 5px}pre{padding:8px 12px;overflow-x:scroll}pre>code{border:0;padding-right:0;padding-left:0}.wrapper{max-width:-webkit-calc(800px - (30px * 2));max-width:calc(800px - (30px * 2));margin-right:auto;margin-left:auto;padding-right:30px;padding-left:30px}.footer-col-wrapper:after,.wrapper:after{content:"";display:table;clear:both}.icon>svg{display:inline-block;width:16px;height:16px}.icon>svg path{fill:#828282}.site-header{border-top:5px solid #424242;border-bottom:1px solid #e8e8e8;min-height:56px;position:relative}.site-title{font-size:26px;line-height:56px;float:left}.site-title,.site-title:visited{color:#fff}.site-nav{float:right;line-height:56px}.site-nav .menu-icon{display:none}.site-nav .page-link{color:#fff;line-height:1.5}.site-nav .page-link:not(:first-child){margin-left:20px}.site-footer{border-top:1px solid #e8e8e8;padding:30px 0}.footer-heading{font-size:18px;margin-bottom:15px}.contact-list,.social-media-list{list-style:none;margin-left:0}.footer-col-wrapper{font-size:15px;color:#828282;margin-left:-15px}.footer-col{float:left;margin-bottom:15px;padding-left:15px}.footer-col-1{width:-webkit-calc(35% - (30px / 2));width:calc(35% - (30px / 2))}.footer-col-2{width:-webkit-calc(20% - (30px / 2));width:calc(20% - (30px / 2))}.footer-col-3{width:-webkit-calc(45% - (30px / 2));width:calc(45% - (30px / 2))}@media screen and (max-width:600px){.site-nav{position:absolute;top:9px;right:30px;background-color:#242424;border:1px solid #e8e8e8;border-radius:5px;text-align:right;z-index:1}.site-nav .menu-icon{display:block;float:right;width:36px;height:26px;line-height:0;padding-top:10px;text-align:center}.site-nav .menu-icon>svg{width:18px;height:15px}.site-nav .menu-icon>svg path{fill:#424242}.site-nav .trigger{clear:both;display:none}.site-nav:hover .trigger{display:block;padding-bottom:5px}.site-nav .page-link{display:block;padding:5px 10px}.footer-col{float:none;width:-webkit-calc(100% - (30px / 2));width:calc(100% - (30px / 2))}}.page-content{padding:30px 0}.page-heading,.post-content h4{font-size:20px}.post-list{margin-left:0;list-style:none}.post-content,.post-header,.post-list>li{margin-bottom:30px}.post-meta{font-size:14px;color:#828282}.post-link{font-size:24px}.code{font-family:monospace}.post-title{font-size:42px;line-height:1}.post-content h2{font-size:32px}.post-content h3{font-size:26px}@media screen and (max-width:800px){.wrapper{max-width:-webkit-calc(800px - (30px));max-width:calc(800px - (30px));padding-right:15px;padding-left:15px}.footer-col-1,.footer-col-2{width:-webkit-calc(50% - (30px / 2));width:calc(50% - (30px / 2))}.footer-col-3{width:-webkit-calc(100% - (30px / 2));width:calc(100% - (30px / 2))}.post-title{font-size:36px}.post-content h2{font-size:28px}.post-content h3{font-size:22px}.post-content h4{font-size:18px}}.highlight{background:#fff}.highlight .c,.highlight .c1,.highlight .cm{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .cp,.highlight .cs{color:#999;font-weight:700}.highlight .gs,.highlight .k,.highlight .kc,.highlight .kd,.highlight .kp,.highlight .kr,.highlight .o,.highlight .ow{font-weight:700}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .gr,.highlight .gt{color:#a00}.highlight .bp,.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp,.highlight .nn{color:#555}.highlight .gu{color:#aaa}.highlight .kt,.highlight .nc{color:#458;font-weight:700}.highlight .il,.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .s,.highlight .s1,.highlight .s2,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .na,.highlight .no,.highlight .nv,.highlight .vc,.highlight .vg,.highlight .vi{color:teal}.highlight .nb{color:#0086b3}.highlight .ni{color:purple}.highlight .ne,.highlight .nf{color:#900;font-weight:700}.highlight .nt{color:navy}.highlight .w{color:#bbb}.highlight .sr{color:#009926}.highlight .ss{color:#990073}
+/*# sourceMappingURL=main.css.map */
 </style>
 </head>
-<body>
-<table class="mainest">
-<tr><td>
-    <h1>Басты бет</h1>
-    <h2>Ең көп кіретін сілтемелер</h2>
-    <table class="mlink-cont"><tr>
-        <td><a class="mlink-a" href="whatmonth.html"><img src="../cdn/imastore/icons8-table-96.png" class="mlink-img"></a></td>
-        <td><a class="mlink-a" href="playlist/a.html" target="_blank"><img src="../cdn/imastore/icons8-musical-notes-96.png" class="mlittlelink-img"></a></td>
-    </tr></table>
-    </table>
-</td></tr>
-</table>
-<div id="menu" class="hidden">
-        <ul>
-            <li><a href="https://cxbq.github.io">Басты бет</a></li>
-            <li><a href="../sb/whatmonth.html">Үй-тап. кестелері</a></li>
-            <li><a href="../subject/all.html">Пәндер</a></li>
-        </ul>
-    </div>
-<div class="topnav">
-  <button id="menuButton" >
-        <img src="../img/menu.png">
-    </button>
-  <a href="https://cxbq.github.io" id="list">
-        <img src="../img/nurbox.png" style="width: 20px;">
-  </a>
-  <a href="https://cxbq.github.io">Басты бет</a>
+
+
+  <body>
+
+  <div class="wrapper">
+<!-- twrp.me top responsive -->
+  </div>
+
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="https://cxbq.github.io/">cxbq</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+
+          <a class="page-link" href="https://cxbq.github.io/">Басты бет</a> 
+          <a class="page-link" href="https://cxbq.github.io/sb/whatmonth.html">Үй жұмысы</a>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="home">
+<header class="post-header">
+    <h1 class="post-title">10 "A" - Басты бет</h1>
+  </header>
+
+<ul class="post-list">
+    
+      <li>
+        <span class="post-meta">[Үй тапсырма] - Oct 1, 2023</span>
+
+        <h2>
+          <a class="post-link" href="list-1023.html">Қазан айы 2023 - Күнтізбе</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">[Үй тапсырма] - Oct 12, 2023</span>
+
+        <h2>
+          <a class="post-link" href="a/b.html">Барлық Үй Тапсырмалары</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">[Үй тапсырма] - Sep 1, 2023</span>
+
+        <h2>
+          <a class="post-link" href="list-0923.html">Қыркүйек айы 2023 - Күнтізбе</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 15, 2023</span>
+
+        <h2>
+          <a class="post-link" href="whatmonth.html">Ағымдағы айға қайта бағыттау</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 15, 2023</span>
+
+        <h2>
+          <a class="post-link" href="https://github.com/cxbq/cxbq.github.io/commits/main">Барлық түзетулер</a>
+        </h2>
+      </li>
+    
+  </ul>
+
 </div>
-<div id="unavailable-message">
-        <p>Not available on your device.<br>Құрылғыда қол жетімді емес.<br>Недоступно на вашем устройстве</p>
+
+      </div>
     </div>
-<div class="preloader">
-        <img src="../cdn/load/loading.gif" alt="Loading..." />
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+    <p class="text">&copy; 2023 Mr. Cxbq</p>
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/cxbq">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">cxbq</span>
+            </a>
+          </li>
+          
+
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">This is the cxbq website!  Here you will find randomly posted technique things.
+</p>
+      </div>
     </div>
-<script type="text/javascript">
-// Get references to the button and the menu
-const menuButton = document.getElementById("menuButton");
-const menu = document.getElementById("menu");
 
-// Function to toggle the menu's visibility
-function toggleMenu() {
-    if (menu.classList.contains("hidden")) {
-        menu.classList.remove("hidden");
-    } else {
-        menu.classList.add("hidden");
-    }
-}
+  </div>
 
-// Add a click event listener to the button
-menuButton.addEventListener("click", toggleMenu);
+</footer>
 
-function openPage() {
-            // Get the current date
-            var currentDate = new Date();
 
-            // Extract the day, month, and year components
-            var day = currentDate.getDate().toString().padStart(2, '0');
-            var month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Adding 1 because months are zero-indexed
-            var year = currentDate.getFullYear().toString().slice(-2); // Using the last two digits of the year
+  </body>
 
-            // Generate the URL with the directory structure
-            var url = "sb/" + day + month + year + ".html";
-
-            // Open the webpage in a new tab or window
-            window.open(url);
-        }
-function checkViewportWidth() {
-            if (window.innerWidth < 185) {
-                window.location.href = "https://your-special-url.com";
-            }
-        }
-
-        // Add an event listener to check the viewport width when the page is fully loaded
-        window.addEventListener('DOMContentLoaded', function () {
-            checkViewportWidth();
-        });
-
-// Add a click event listener to the button
-menuButton.addEventListener("click", toggleMenu);
-// Wait for the page to fully load
-window.addEventListener("load", function () {
-    // Hide the preloader when the page is loaded
-    const preloader = document.querySelector(".preloader");
-    preloader.style.display = "none";
-});
-
-</script>
-</body>
 </html>
