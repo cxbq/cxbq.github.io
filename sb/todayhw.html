@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>10`А` - Ағымдағы күнге бағыттау</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#cdb0e7">
+
+    <meta name="description" content="10`А` - Ағымдағы күнге бағыттау">
+    <meta property=’og:title’ content='17.10.2023 - Ағымдағы күнге бағыттау'/>
+    <meta property=’og:image’ content='https://cxbq.github.io/sb/cover.png'/>
+    <meta property=’og:description’ content='10`А` - Ағымдағы күнге бағыттау'/>
+    <meta property=’og:url’ content='https://cxbq.github.io'/>
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='627' />
+    <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+    <meta property="og:type" content='website'/>
+    <script>
+        function redirectToTodayPage() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = String(today.getFullYear());
+            const redirectURL = day + month + year + '.html';
+            window.location.href = redirectURL;
+        }
+
+        // Call the redirectToTodayPage function when the page loads
+        window.onload = redirectToTodayPage;
+    </script>
+</head>
+<body>
+    <p>Егер бағыттау орындалмаса, <a href="051023.html">мына сілтемеге басыңыз</a>.</p>
+</body>
+</html>
