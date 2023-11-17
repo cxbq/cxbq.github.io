@@ -1,4 +1,4 @@
-# cxbq.github.io - small homework project
+# cxbq.github.io - homework project
 welcome to the open-source code of dark-themed bad web-styled website
 
 ## Note:
