@@ -25,15 +25,53 @@ body {
 .toptb img {
 	width: 25px;
 	height: 25px;
-	padding: 3.5px 7px 3.5px 7px;
+	padding: 3.5px 10px 3.5px 10px;
 }
 .toptb h3 {
 	color: #eee;
 	font-family: monospace;
 	font-size: 15px;
+	margin: 0;
+	margin-inline: 1px;
 }
 .toptb p {
-	color: #eee;
+	color: #858585;
 	font-family: monospace;
 	font-size: 11px;
+	margin: 0;
+	margin-inline: 1px;
+	vertical-align: top;
+}
+.toptb p:hover, .toptb h3:hover {
+	cursor: pointer;
+}
+.userinf1 {
+	width: 100%;
+	background-color: #151515;
+	border-radius: 9.42px;
+	margin-top: 4px;	
+}
+.userinf1 h2 {
+	color: #eee;
+	font-family: monospace;
+	margin: 2px 0 1px 0;
+}
+.userinf1 p {
+	color: #eee;
+	font-size: 12.5px;
+	font-family: monospace;
+	margin: 2px 3px 3px 0;
+}
+.userinf1 img {
+	margin-right: 5px;
+}
+.vatr {
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	padding: 3.5px 10px 3.5px 10px;
+}
+p.joined {
+	color: #eee;
+	margin: 2px 10px 2px 15px;
 }
