@@ -1,19 +1,58 @@
 body {
 	background-color: #000;
 }
-@media (min-width: 401px){
+@media (max-width: 400px){
 .main {
-	width: 400px;
+	width: 370px;
     position: absolute;
     left: 50%;
     -ms-transform: translateX(-50%);
     -webkit-transform: translate(-50%,0);
     transform: translate(-50%,0);
 }
+video { width: 360px }
 }
-@media (max-width: 400px){
+@media (max-width: 370px){
+.main {	width: 340px; }
+video { width: 335px }
+}
+@media (max-width: 340px){
+.main {	width: 320px;}
+video { width: 300px }
+#friend {
+	margin: 0 3px 0 3px;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+}
+}
+@media (max-width: 310px){
+.main {	width: 290px;}
+video { width: 270px }
+#friend {
+	margin: 0 3px 0 3px;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+}
+.nntb td img { width: 40px }
+}
+@media (max-width: 250px){
+.main {	width: 100%;}
+video { width: 100px }
+#friend {
+	margin: 0 3px 0 3px;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+#m { display:none }
+#badge { width: 20px; }
+.nntb td img { width: 40px }
+}
+@media (min-width: 401px){
 .main {
-	width: 340px;
+	width: 400px;
     position: absolute;
     left: 50%;
     -ms-transform: translateX(-50%);
