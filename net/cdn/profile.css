@@ -1,6 +1,7 @@
 body {
 	background-color: #000;
 }
+@media (min-width: 401px){
 .main {
 	width: 400px;
     position: absolute;
@@ -8,6 +9,17 @@ body {
     -ms-transform: translateX(-50%);
     -webkit-transform: translate(-50%,0);
     transform: translate(-50%,0);
+}
+}
+@media (max-width: 400px){
+.main {
+	width: 340px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
 }
 		a#z {
 			font-family: arial;
