@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jarmaticus</title>
+	<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="shortcut icon" href="favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Jarmaticus" />
+<link rel="manifest" href="favicon/site.webmanifest" />
+ 	<meta name="description" content="Jarmaticus - үй жұмысы, кезекші, жедел көмекші">  
+    <meta property=’og:title’ content="Jarmaticus"/>
+    <meta property=’og:description’ content='Jarmaticus - үй жұмысы, кезекші, жедел көмекші'/>
+    <meta property=’og:url’ content='https://11jarmat.github.io'/> 
+    <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types --> 
+    <meta property="og:type" content='website'/> 
+
+
+
+	<style type="text/css">
+	body { background-color:#000; background-image: url(bggg.png); }
+	.main {
+	  width: 350px;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  
+	}
+	.container {
+	  width: 100%;
+	  margin-bottom: 4px;
+	  background-color: #121212;
+	  border-radius: 7px;
+	}
+	.container h1, h2, h3, h4, h5, h6 {
+	  color: #fff;
+	  font-family: monospace;
+	  margin-inline: 10px;
+	  margin-right: 0;
+	  margin-top: 0;
+	  margin-bottom: 0;
+
+	}
+	.container h1 { padding-top: 15px; padding-bottom: 5px; }
+	.container h2,h3,h4,h5,h6 { padding-top: 2px; padding-bottom:2px; }
+	.container h2 { color: white }
+	.container p {
+	  color: #eee;
+	  font-family: monospace;
+	  margin-inline: 10px;
+	  margin-right: 0;
+	  margin-top: 0;
+	  margin-bottom: 0;
+	  padding-top: 2px;
+	  padding-bottom: 2px;
+	}
+	.container p a {
+	  color: #0044CC;
+	  text-decoration-color: #0044CC;
+	  font-family: monospace;
+	}
+	.container p a:hover {
+	  background-color: #0044CC;
+	  color: #eee;
+	}
+	.container a {
+	  color: #eee;
+	  text-decoration-color: #282828;
+	  font-family: monospace;
+	  margin-inline: 10px;
+	  margin-right: 0;
+	  margin-top: 0;
+	  margin-bottom: 0;
+	  padding-top: 2px;
+	  padding-bottom: 2px;
+	}
+	.container a:hover {
+	  background-color: #000;
+	}
+	.bottomshift { height:25px }
+
+   table {
+      width: 330px;
+      color: #fff;
+      display: none; /* Скрываем все таблицы по умолчанию */
+      border: 1px solid white;
+      border-radius: 7px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: arial;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+    }
+    td {
+      background-color: #343434;
+      text-align: center;
+    }
+    thead {
+    background-color: #6200EE;
+  color: #fff;
+}
+	thead.b { background-color:#3700B3; }
+
+	.duty {
+		color: #fff;
+		font-family: monospace;
+		text-align: left;
+		margin-inline: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	#greeting, #dateTime, #countdown {
+		color: #fff;
+		font-family: monospace;
+		text-align: left;
+		margin-inline: 10px;
+		font-size: 14.5px;
+		margin-top: 2px;
+	}
+	</style>
+</head>
+<body>
+<!--mainest container-->
+<div class="main">
+	<div class="container">
+		<h1>Jarmaticus</h1>
+
+  <div id="greeting"></div>
+  <div id="dateTime"></div>
+
+
+	<div align="center">
+	<table id="monday">
+	<thead><tr><th>Бүгінгі сабақ кестесі</th></tr></thead>
+    <thead class="b"><tr><th>Дүйсенбі</th></tr></thead>
+    <tr><td>1. Қ.әдебиет [8:00-8:45]</td></tr>
+    <tr><td>2. Биология [8:50-9:35]</td></tr>
+    <tr><td>3. Алгебра [9:40-10:25]</td></tr>
+    <tr><td>4. Қ.тарих [10:35-11:20]</td></tr>
+    <tr><td>5. Орыс тілі [11:25-12:10]</td></tr>
+    <tr><td>6. Дене [12:15-13:00]</td></tr>
+    <tr><td>7. Ағылшын [13:05-13:50]</td></tr>
+  	</table>
+  
+  <table id="tuesday">
+  	<thead><tr><th>Бүгінгі сабақ кестесі</th></tr></thead>
+    <thead class="b"><tr><th>Сейсенбі</th></tr></thead>
+    <tr><td>1. Информатика [8:00-8:45]</td></tr>
+    <tr><td>2. Геометрия [8:50-9:35]</td></tr>
+    <tr><td>3. География [9:40-10:25]</td></tr>
+    <tr><td>4. Химия [10:35-11:20]</td></tr>
+    <tr><td>5. Дж.тарих [11:25-12:10]</td></tr>
+    <tr><td>6. Биология негіздері [12:15-13:00]</td></tr>
+    <tr><td>7. Мат.сауаттылық [13:05-13:50]</td></tr>
+    <tr><td>-</td></tr>
+  </table>
+  
+  <table id="wednesday">
+    <thead><tr><th>Бүгінгі сабақ кестесі</th></tr></thead>
+    <thead class="b"><tr><th>Сәрсенбі</th></tr></thead>
+    <tr><td>1. Алгебра [8:00-8:45]</td></tr>
+    <tr><td>2. Физика [8:50-9:35]</td></tr>
+    <tr><td>3. Орыс тілі [9:40-10:25]</td></tr>
+    <tr><td>4. Ағылшын [10:35-11:20]</td></tr>
+    <tr><td>5. Дене [11:25-12:10]</td></tr>
+    <tr><td>6. Биология [12:15-13:00]</td></tr>
+    <tr><td>7. Қ.тарих [13:05-13:50]</td></tr>
+    <tr><td>8. Құзіреттілік [14:00-14:45]</td></tr>
+  </table>
+  
+  <table id="thursday">
+    <thead><tr><th>Бүгінгі сабақ кестесі</th></tr></thead>
+    <thead class="b"><tr><th>Бейсенбі</th></tr></thead>
+    <tr><td>1. Геометрия [8:00-8:45]</td></tr>
+    <tr><td>2. Қ.әдебиет [8:50-9:35]</td></tr>
+    <tr><td>3. Алгебра [9:40-10:25]</td></tr>
+    <tr><td>4. Информатика [10:35-11:20]</td></tr>
+    <tr><td>5. География [11:25-12:10]</td></tr>
+    <tr><td>6. Химия [12:15-13:00]</td></tr>
+    <tr><td>7. АӘТД (НВП) [13:05-13:50]</td></tr>
+        <tr><td>-</td></tr>
+  </table>
+  
+  <table id="friday">
+    <thead><tr><th>Бүгінгі сабақ кестесі</th></tr></thead>
+    <thead class="b"><tr><th>Жұма</th></tr></thead>
+    <tr><td>1. Ағылшын [8:00-8:45]</td></tr>
+    <tr><td>2. Алгебра [8:50-9:35]</td></tr>
+    <tr><td>3. Қазақ тілі [9:40-10:25]</td></tr>
+    <tr><td>4. Дене [10:35-11:20]</td></tr>
+    <tr><td>5. Физика [11:25-12:10]</td></tr>
+    <tr><td>6. Құқық [12:15-13:00]</td></tr>
+        <tr><td>-</td></tr>
+            <tr><td>-</td></tr>
+  </table>
+  
+  <table id="saturday">
+  	<thead><tr><th>Бүгін сабақ жоқ :)</th></tr></thead>
+    <thead class="b"><tr><th>Сенбі</th></tr></thead>
+    <tr><td>Демалыс</td></tr>
+    <tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr>
+  </table>
+  
+	<table id="sunday">
+  	<thead><tr><th>Бүгін сабақ жоқ :)</th></tr></thead>
+    <thead class="b"><tr><th>Жексенбі</th></tr></thead>
+    <tr><td>Демалыс</td></tr>
+    <tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr><tr><td>-</td></tr>
+  	</table>
+
+
+	<div class="duty" id="dutyResult"></div>
+	<div id="countdown"></div>
+</div>
+
+		<a href="https://bilimclass.kz/2024/schedule" style="color: limegreen;">Bilimclass</a> | <a href="https://chatgpt.com/" style="color: #eee;">ChatGPT</a> | <a href="https://www.geogebra.org/classic" style="color: hotpink;">GeoGebra</a> | <a href="https://znanija.com/" style="color: skyblue;">Brainly</a>
+		<!--bottom shift-->
+		<div class="bottomshift"></div>
+	</div>
+</div>
+
+  <script>
+    // Функция для показа таблицы текущего дня
+    function showTableForToday() {
+      // Получаем текущий день недели (0 = воскресенье, 6 = суббота)
+      const dayOfWeek = new Date().getDay();
+      
+      // Идентификаторы таблиц в соответствии с днями недели
+      const tableIds = [
+        "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"
+      ];
+      
+      // Показываем таблицу для текущего дня
+      const tableId = tableIds[dayOfWeek];
+      document.getElementById(tableId).style.display = "table";
+    }
+
+    // Вызываем функцию при загрузке страницы
+    showTableForToday();
+
+        // Список учеников
+    const students = [
+      "Абдрахман Нұркенже", "Ақан Айдана", "Ақылбай Алибек", "Әскербек Нұрдәулет", "Жарқынқызы Динара", 
+      "Қуаныш Айдар", "Орманбек Әлбина", "Өндірісбай Арнад", "Сейтакын Аружан", "Сейтакын Аяжан", 
+      "Серік Расул", "Скиндир Аружан", "Утеген Сымбат", "Шытырбаева Айша"
+    ];
+
+    // Функция для определения дежурного
+    function findDutyStudent() {
+      const today = new Date();
+      const dayOfWeek = today.getDay(); // 0 (вс) - 6 (сб)
+      const dayOfMonth = today.getDate(); // День месяца
+
+      const dutyResult = document.getElementById("dutyResult");
+
+      // Если сегодня выходной (суббота или воскресенье)
+      if (dayOfWeek === 0 || dayOfWeek === 6) {
+        dutyResult.innerHTML = "<span class='alert'>Бүгін демалыс, кезекші жоқ.</span>";
+        return;
+      }
+
+      // Расчёт текущего дежурного (нумерация начинается с 0)
+      const dutyIndex = (dayOfMonth - 1) % students.length; 
+      const dutyStudent = students[dutyIndex];
+
+      // Вывод результата
+      dutyResult.textContent = `Бүгін кезекші: ${dutyStudent}`;
+    }
+
+    // Вызов функции при загрузке страницы
+    findDutyStudent();
+
+    function updateDateTime() {
+      const now = new Date();
+
+      // Получение текущего времени
+      const hours = now.getHours();
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+
+      // Определение приветствия
+      let greeting;
+      if (hours >= 6 && hours < 12) {
+        greeting = "Қайырлы таң!";
+      } else if (hours >= 12 && hours < 18) {
+        greeting = "Қайырлы күн!";
+      } else {
+        greeting = "Кеш жарық!";
+      }
+
+      // Получение текущей даты
+      const day = String(now.getDate()).padStart(2, '0');
+      const month = String(now.getMonth() + 1).padStart(2, '0'); // Месяцы начинаются с 0
+      const year = now.getFullYear();
+
+      // Обновление HTML
+      document.getElementById("greeting").textContent = greeting;
+      document.getElementById("dateTime").textContent = `Бүгін: ${day}.${month}.${year}, сағат: ${hours}:${minutes}:${seconds}`;
+    }
+
+    // Обновление времени каждую секунду
+    setInterval(updateDateTime, 1000);
+
+    // Первоначальный вызов функции
+    updateDateTime();
+
+    function updateCountdown() {
+      const now = new Date();
+
+      // Даты экзаменов
+      const examDates = [
+        { name: "Қаңтар ҰБТ-ға", date: new Date("2025-01-10") },
+        { name: "Наурыз ҰБТ-ға", date: new Date("2025-03-18") },
+        { name: "Нағыз ҰБТ-ға", date: new Date("2025-05-16") }
+      ];
+
+      // Расчёт оставшегося времени
+      const countdownParts = examDates.map(({ name, date }) => {
+        const diff = date - now; // Разница в миллисекундах
+        if (diff <= 0) return `${name}: уже прошел!`;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+
+        return `${name}: ${days} күн, ${hours} сағат қалды`;
+      });
+
+      // Вывод результата в одну строку
+      document.getElementById("countdown").textContent = countdownParts.join(" | ");
+    }
+
+    // Обновление каждую секунду
+    setInterval(updateCountdown, 1000);
+
+    // Первоначальный вызов
+    updateCountdown();
+  </script>
+
+</body>
+</html>
